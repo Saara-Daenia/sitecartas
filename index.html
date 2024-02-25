@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Imagens</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #D2691E; /* Fundo em marrom mais claro */
+            font-family: 'Arial', sans-serif;
+            color: #fff; /* Cor do texto */
+        }
+        .inicio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        .inicio img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .titulo {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 36px;
+            color: #fff; /* Cor do título */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            margin: auto;
+            max-width: 800px;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+        .quadrado, .janela-flutuante {
+            position: relative;
+            width: calc(33.33% - 20px); /* 33.33% da largura menos o espaço entre */
+            height: 200px; /* Altura fixa */
+            background-color: #8B4513; /* Marrom mais escuro */
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            border: 2px solid gold; /* Adicionando a borda dourada */
+        }
+        .quadrado img, .janela-flutuante img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .janela-flutuante {
+            background-color: #8B4513; /* Marrom mais escuro */
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            max-width: 400px;
+            text-align: justify;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .janela-flutuante.active {
+            display: block;
+        }
+        .fechar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff; /* Cor do ícone de fechar */
+            font-size: 24px;
+        }
+        .texto {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+            max-height: 150px; /* Altura máxima para rolagem */
+            overflow-y: auto; /* Adicionando rolagem vertical */
+        }
+    </style>
+</head>
+<body>
+    <div class="inicio">
+        <img src="fotos/carta1.png" alt="Imagem de Fundo" />
+    </div>
+    <div class="titulo">Cartas</div>
+    <div class="image-container">
+        <!-- Primeira fileira -->
+        <div class="row">
+            <div class="quadrado" onclick="mostrarTexto(this)">
+                <img src="fotos/carta bonita.jpg" alt="(adicionar texto)">
+                <div class="texto">Querido Bruno,
+                    Cada vez que escrevo para você, é como se estivesse contando os motivos pelos
+                    quais sua presença é tão especial. Seu senso de humor, apesar de às vezes um tanto
+                    duvidoso, é aquilo que me faz rir quando mais preciso. É como um dom, sabe,
+                    transformar o cotidiano em momentos divertidos.
+                    Sua personalidade é um verdadeiro imã. Sua calma é como uma brisa suave, trazendo
+                    tranquilidade em meio ao corre-corre diário. Seu carisma é inegável, atraindo todos
+                    ao seu redor, e sua compreensão e paciência são um porto seguro para quem
+                    precisa.
+                    O que mais admiro em você é a sua generosidade e cuidado. Sempre disposto a
+                    ajudar, você se torna um ponto de apoio para muitos, mesmo nos momentos mais
+                    difíceis. É algo que valorizo muito em você.
+                    Sua presença é um verdadeiro presente na minha vida. Continue espalhando esse
+                    carinho e bondade por onde passa.
+                    Com carinho,
+                    Geisi
+                    </div>
+            </div>
+            <div class="quadrado" onclick="mostrarTexto(this)">
+                <img src="fotos/carta bonita.jpg" alt="(adicionar texto)">
+                <div class="texto">Não sei como você está nesse momento, mas desejo de coração que esteja bem. A
+                    cada vez que te escrevo, sinto que repito as mesmas coisas, mas meus sentimentos
+                    se intensificam a cada dia que passa. Eu amo estar com você, mesmo que à
+                    distância. Amo conversar contigo, amo muito ouvir tua voz e me preocupo muito
+                    quando você não está bem. Já te disse e repito, meu amor, pode sempre contar
+                    comigo, tá?
+                    Além disso, quero te dizer o quanto amo a tua risada, é algo que ilumina meu dia. E
+                    também admiro demais a tua força e coragem. Sua determinação diante de tudo que
+                    já passou é inspiradora.
+                    Estou aqui para você, te amo.
+                    Com todo carinho,
+                    Geisi
+                    </div>
+            </div>
+            <div class="quadrado" onclick="mostrarTexto(this)">
+                <img src="fotos/carta bonita.jpg" alt="(adicionar texto)">
+                <div class="texto">Meu Querido,
+                    Espero que seu dia tenha começado com um brilho especial. Não sei como
+                    amanheceu hoje para você, mas queria te dizer o quanto é importante pra mim. Eu
+                    entendo que nem sempre precisamos de conselhos ou palavras de conforto (e, pra
+                    ser sincera, não sou lá muito boa nisso 😕🥲). Às vezes, está tudo bem não estar
+                    bem, e está tudo bem em reconhecer isso. Eu sei que tenho meus momentos de
+                    falhas também.
+                    É um alívio saber que você tem amigos maravilhosos que estão sempre prontos para
+                    te ajudar quando necessário. Vou melhorar nisso, prometo, mas enquanto ainda
+                    estou aprendendo, quero que saiba que estou aqui, tá?
+                    Gosto de respeitar o espaço, por isso não costumo perguntar muito para não parecer
+                    intrometida, inconveniente ou chata, e quando o faço, me sinto mal. Mas por favor,
+                    não hesite em me dizer se precisar de algo, porque me importo profundamente com
+                    você ❤️. Tudo o que quero é ver seu bem-estar e felicidade 🥰.
+                    Com todo o meu carinho,
+                    Geisi</div>
+            </div>
+        </div>
+        <!-- Segunda fileira -->
+        <div class="row">
+            <div class="quadrado" onclick="mostrarTexto(this)">
+                <img src="fotos/carta bonita.jpg" alt="(adicionar texto)">
+                <div class="texto">Meu Querido Bruno,
+                    Espero que esteja tendo um dia maravilhoso! Hoje, logo ao acordar no dia 01 de
+                    janeiro de 2024, algo incrível aconteceu: sonhei com você 🥰. E sabe de uma coisa?
+                    Isso só me fez perceber o quanto sou completamente apaixonada por você 🫠❤️.
+                    Você tem esse jeito que faz meu coração bater mais forte, às vezes me fazendo perder
+                    a cabeça algumas (ou muitas!) vezes 🙄💞.
+                    É engraçado como você consegue mexer comigo, mesmo quando está tentando
+                    esconder que algo não está bem, ou quando fica me provocando, causando raiva ou
+                    ciúmes. Ah, e quando você me instiga... Bem, isso não é uma reclamação, tá? 👀
+                    Sabe, cada dia que passa, todos esses sentimentos se intensificam de um jeito que
+                    foge do meu controle, me proporcionando um friozinho na barriga que, às vezes, até
+                    assusta kkkk, mas é um susto delicioso, porque só me faz perceber o quanto eu
+                    estou completamente apaixonada por você 😍.
+                    Bruno, não sei se já disse isso o suficiente, mas eu te amo. Um beijo bem grande só
+                    pra começar! ❤️❤</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Janela flutuante -->
+    <div id="janela-flutuante" class="janela-flutuante">
+        <span class="fechar" onclick="fecharJanela()">&#10006;</span>
+        <div id="texto-janela" class="texto"></div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        function mostrarTexto(elemento) {
+            const texto = elemento.querySelector('.texto').innerHTML;
+            document.getElementById('texto-janela').innerHTML = texto;
+            document.getElementById('janela-flutuante').classList.add('active');
+        }
+
+        function fecharJanela() {
+            document.getElementById('janela-flutuante').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
