@@ -1,3 +1,6 @@
+Para adicionar detalhes dourados ao site, você pode atualizar as bordas, os ícones de fechar e outros elementos relevantes. Aqui está o código HTML atualizado com detalhes dourados:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,9 +11,9 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #D2691E; /* Fundo em marrom mais claro */
+            background-color: #0F3057; /* Fundo em azul mais escuro */
             font-family: 'Arial', sans-serif;
-            color: #fff; /* Cor do texto */
+            color: #C5D2E3; /* Cor do texto em azul claro */
         }
         .inicio {
             display: flex;
@@ -27,7 +30,7 @@
             text-align: center;
             margin-top: 20px;
             font-size: 36px;
-            color: #fff; /* Cor do título */
+            color: #C5D2E3; /* Cor do título em azul claro */
         }
 
         .image-container {
@@ -52,12 +55,12 @@
             position: relative;
             width: calc(50% - 20px); /* 50% da largura menos o espaço entre */
             height: 200px; /* Altura fixa */
-            background-color: #8B4513; /* Marrom mais escuro */
+            background-color: #1A508B; /* Azul mais escuro para os quadrados */
             border-radius: 15px;
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
-            border: 2px solid gold; /* Adicionando a borda dourada */
+            border: 2px solid #FDB813; /* Dourado para a borda */
         }
         .quadrado img, .janela-flutuante img {
             width: 100%;
@@ -65,7 +68,7 @@
             object-fit: cover;
         }
         .janela-flutuante {
-            background-color: #8B4513; /* Marrom mais escuro */
+            background-color: #1A508B; /* Azul mais escuro para a janela flutuante */
             padding: 20px;
             border-radius: 10px;
             z-index: 1000;
@@ -87,7 +90,7 @@
             top: 10px;
             right: 10px;
             cursor: pointer;
-            color: #fff; /* Cor do ícone de fechar */
+            color: #FDB813; /* Cor do ícone de fechar em dourado */
             font-size: 24px;
         }
         .texto {
@@ -149,6 +152,8 @@
             <div class="quadrado" onclick="mostrarTexto(this)">
                 <img src="fotos/carta bonita.jpg" alt="(adicionar texto)">
                 <div class="texto">Meu Querido,
+
+
                     Espero que seu dia tenha começado com um brilho especial. Não sei como
                     amanheceu hoje para você, mas queria te dizer o quanto é importante pra mim. Eu
                     entendo que nem sempre precisamos de conselhos ou palavras de conforto (e, pra
@@ -206,3 +211,6 @@
     </script>
 </body>
 </html>
+```
+
+Nesse código, os detalhes dourados foram adicionados às bordas dos quadrados e aos ícones de fechar da janela flutuante. O restante do estilo permaneceu inalterado.
