@@ -11,6 +11,7 @@
             background-color: #D2691E; /* Fundo em marrom mais claro */
             font-family: 'Arial', sans-serif;
             color: #fff; /* Cor do texto */
+            overflow: hidden; /* Para evitar barras de rolagem */
         }
         .inicio {
             display: flex;
@@ -50,7 +51,7 @@
         }
         .quadrado, .janela-flutuante {
             position: relative;
-            width: calc(50% - 20px); /* 50% da largura menos o espaço entre */
+            width: calc(33.33% - 20px); /* 33.33% da largura menos o espaço entre */
             height: 200px; /* Altura fixa */
             background-color: #8B4513; /* Marrom mais escuro */
             border-radius: 15px;
@@ -96,6 +97,11 @@
             text-align: justify;
             max-height: 150px; /* Altura máxima para rolagem */
             overflow-y: auto; /* Adicionando rolagem vertical */
+        }
+        .coracao {
+            font-size: 24px;
+            color: red;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -143,9 +149,6 @@
                     Geisi
                     </div>
             </div>
-        </div>
-        <!-- Segunda fileira -->
-        <div class="row">
             <div class="quadrado" onclick="mostrarTexto(this)">
                 <img src="fotos/carta bonita.jpg" alt="(adicionar texto)">
                 <div class="texto">Meu Querido,
@@ -165,6 +168,9 @@
                     Com todo o meu carinho,
                     Geisi</div>
             </div>
+        </div>
+        <!-- Segunda fileira -->
+        <div class="row">
             <div class="quadrado" onclick="mostrarTexto(this)">
                 <img src="fotos/carta bonita.jpg" alt="(adicionar texto)">
                 <div class="texto">Meu Querido Bruno,
@@ -183,6 +189,7 @@
                     Bruno, não sei se já disse isso o suficiente, mas eu te amo. Um beijo bem grande só
                     pra começar! ❤️❤</div>
             </div>
+            
         </div>
     </div>
 
@@ -196,13 +203,4 @@
     <script>
         function mostrarTexto(elemento) {
             const texto = elemento.querySelector('.texto').innerHTML;
-            document.getElementById('texto-janela').innerHTML = texto;
-            document.getElementById('janela-flutuante').classList.add('active');
-        }
-
-        function fecharJanela() {
-            document.getElementById('janela-flutuante').classList.remove('active');
-        }
-    </script>
-</body>
-</html>
+            document.getElementById('
