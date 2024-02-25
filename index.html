@@ -8,10 +8,9 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #D2691E; /* Fundo em marrom mais claro */
+            background-color: #b81004; /* Fundo em marrom mais claro */
             font-family: 'Arial', sans-serif;
             color: #fff; /* Cor do texto */
-            overflow: hidden; /* Para evitar barras de rolagem */
         }
         .inicio {
             display: flex;
@@ -97,11 +96,6 @@
             text-align: justify;
             max-height: 150px; /* Altura máxima para rolagem */
             overflow-y: auto; /* Adicionando rolagem vertical */
-        }
-        .coracao {
-            font-size: 24px;
-            color: red;
-            margin-right: 5px;
         }
     </style>
 </head>
@@ -203,4 +197,14 @@
     <script>
         function mostrarTexto(elemento) {
             const texto = elemento.querySelector('.texto').innerHTML;
-            document.getElementById('
+            document.getElementById('texto-janela').innerHTML = texto;
+            document.getElementById('janela-flutuante').classList.add('active');
+        }
+
+        function fecharJanela() {
+            document.getElementById('janela-flutuante').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+
