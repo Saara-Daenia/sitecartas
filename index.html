@@ -1,4 +1,3 @@
-Para adicionar detalhes dourados ao site, você pode atualizar as bordas, os ícones de fechar e outros elementos relevantes. Aqui está o código HTML atualizado com detalhes dourados:
 
 ```html
 <!DOCTYPE html>
@@ -65,7 +64,7 @@ Para adicionar detalhes dourados ao site, você pode atualizar as bordas, os íc
         .quadrado img, .janela-flutuante img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Manter proporção e cortar para ajustar */
         }
         .janela-flutuante {
             background-color: #1A508B; /* Azul mais escuro para a janela flutuante */
@@ -147,7 +146,9 @@ Para adicionar detalhes dourados ao site, você pode atualizar as bordas, os íc
                     </div>
             </div>
         </div>
-        <!-- Segunda fileira -->
+        <!-- Segunda fileira
+
+ -->
         <div class="row">
             <div class="quadrado" onclick="mostrarTexto(this)">
                 <img src="fotos/carta bonita.jpg" alt="(adicionar texto)">
@@ -211,6 +212,3 @@ Para adicionar detalhes dourados ao site, você pode atualizar as bordas, os íc
     </script>
 </body>
 </html>
-```
-
-Nesse código, os detalhes dourados foram adicionados às bordas dos quadrados e aos ícones de fechar da janela flutuante. O restante do estilo permaneceu inalterado.
